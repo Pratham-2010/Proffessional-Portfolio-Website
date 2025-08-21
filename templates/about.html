@@ -1,0 +1,36 @@
+{% include "header.html" %}
+
+<div class="gradient-background">
+  <div class="container my-5 about-section">
+      <div class="row align-items-center g-7">
+
+        <!-- Left Column: Profile Image + Social -->
+        <div class="col-md-5 text-center text-md-start">
+          <div class="profile-image-wrapper position-relative d-inline-block">
+            <img src="{{ url_for('static', filename='assets/profile.jpg') }}" alt="Profile" class="profile-img">
+            <div class="social-icons position-absolute bottom-0 start-50 translate-middle-x">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-x"></i></a>
+              <a href="#"><i class="bi bi-pinterest"></i></a>
+            </div>
+          </div>
+        </div>
+
+        
+        <!-- Right Column: About Text -->
+        <div class="col-md-7 py-5">
+          <h2 class="fw-bold mb-3">I am Professional User Experience Developer</h2>
+          <p>I develop services for customers specializing in creating stylish, modern websites, web services, and online stores. My passion is to develop digital user experiences.</p>
+          <p>I develop services for customers specializing in creating stylish, modern websites, web services.</p>
+          <div class="mt-4">
+            <a href="{{url_for('projects')}}" class="btn btn-primary me-3">My Projects</a>
+            <a href="#" class="btn btn-outline-dark">Download CV</a>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+<!--{{ url_for('static', filename='files/CV.pdf') }}-->
+{% include "footer.html" %}

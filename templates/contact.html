@@ -1,0 +1,71 @@
+{% include "header.html" %}
+
+<div class="Gradient-bg">
+  <div class="container my-5 contact-section">
+    <div class="row g-4">
+      <!-- Left Column: Contact Info -->
+      <div class="col-md-5 mb-5">
+        <h2 class="fw-bold mb-3">Let's Discuss</h2>
+        <p class="text-light">You can contact me by filling the form or sending an email directly.</p>
+
+        <div class="mb-3 d-flex align-items-center contact-info">
+          <i class="bi bi-geo-alt-fill me-3"></i>
+          <div><strong>Address:</strong> Ahmedabad, Gujarat</div>
+        </div>
+
+        <div class="mb-3 d-flex align-items-center contact-info">
+          <i class="bi bi-envelope-fill me-3"></i>
+          <div><strong>Email:</strong> prathampatel0294@gmail.com</div>
+        </div>
+
+        <div class="mb-3 d-flex align-items-center contact-info">
+          <i class="bi bi-telephone-fill me-3"></i>
+          <div><strong>Call Me Now:</strong> 00-1234 00000</div>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="mt-4 d-flex gap-3 social-icons">
+          <a href="#" target="_blank"><i class="bi bi-facebook"></i></a>
+          <a href="#" target="_blank"><i class="bi bi-linkedin"></i></a>
+          <a href="#" target="_blank"><i class="bi bi-instagram"></i></a>
+          <a href="#" target="_blank"><i class="bi bi-pinterest"></i></a>
+        </div>
+      </div>
+
+      <!-- Right Column: Contact Form -->
+      <div class="col-md-7">
+        <form method="POST" action="{{ url_for('contact') }}">
+          <div class="row mb-3">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Name*" name="name" required>
+            </div>
+            <div class="col">
+              <input type="email" class="form-control" placeholder="Email*" name="email" required>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Location" name="location">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Budget*" name="budget" required>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Subject*" name="subject" required>
+          </div>
+
+          <div class="mb-3">
+            <textarea class="form-control" placeholder="Message*" name="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="btn">Submit <i class="bi bi-send-fill ms-1"></i></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include "footer.html" %}
