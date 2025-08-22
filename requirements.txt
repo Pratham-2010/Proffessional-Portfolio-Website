@@ -1,5 +1,7 @@
 Flask
 flask_bootstrap
 gunicorn
+python-dotenv
+
 
 
